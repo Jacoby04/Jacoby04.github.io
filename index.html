@@ -11,16 +11,23 @@
 	
 	<!-- My own CSS files go here. -->
 </head>
-<body>
+<body ng-app="app" ng-controller="MainCtrl as main">
 
+	<!-- <div class="container">
+		<h1>{{main.title}}</h1>
+	</div> -->
 
 <!-- Scripts for frameworks, libraries, and basic functionality go here. -->
-<!-- Last updated CDM: 1-5-16-->
+<!-- Last updated CDN: 1-5-16-->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" 
 integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
 
 <!-- My own script files go here. -->
+<script src="/app/app.module.js"></script>
+<script src="/app/controllers/main/main.controller.js"></script>
 
 </body>
 </html>
