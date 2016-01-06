@@ -1,0 +1,20 @@
+
+/* IDs */
+
+#secretComment{
+	display: none;
+}
+
+
+
+/* Classes */
+
+/* Used to put the input on the same line as the button. */
+.text-input{
+	overflow: hidden;
+	padding-right: .5em;
+}
+
+.float-right{
+	float: right;
+}

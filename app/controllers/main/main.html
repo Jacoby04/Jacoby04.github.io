@@ -3,30 +3,53 @@
 	<h1>{{main.title}}</h1>
 	
 	<p>
-	This is a website that I am building in my (very limited) free time. 
-	With this, I hope to keep some of my front-end web development skills sharp.
-	I will be using HTML (duh), CSS (also, duh), JavaScript, AngularJS, and Bootstrap.
-	I have done a lot with Angular before, and it is a pretty sweet tool for whipping
-	together client-side sites quickly. I will <i>attempt</i> to follow best practices 
-	while making use of Angular. I have three reasons for this. First, I will be working
-	on this and adding to it over time, so I want to be able to easily pick up where
-	I have left off at. Second, by attempting to figure out and follow best practices,
-	I find that I often end up learning more about the tools I am using. Third, best practice
-	is best. Finally, I will admit early on that I use Bootstrap for the majority of my styling.
-	I could do it all with my own CSS, but I find that to be really tedious and time-consuming;
-	as a college student, and soon-to-be graduate, I don't have time to do battle with styling.
+		This is a website that I am building in my (very limited) free time. 
+		With this, I hope to keep some of my front-end web development skills sharp.
+		I will be using HTML (duh), CSS (also, duh), JavaScript, AngularJS, and Bootstrap.
+		I have done a lot with Angular before, and it is a pretty sweet tool for whipping
+		together client-side sites quickly. I will <i>attempt</i> to follow best practices 
+		while making use of Angular. I have three reasons for this. First, I will be working
+		on this and adding to it over time, so I want to be able to easily pick up where
+		I have left off at. Second, by attempting to figure out and follow best practices,
+		I find that I often end up learning more about the tools I am using. Third, best practice
+		is best. Finally, I will admit early on that I use Bootstrap for the majority of my styling.
+		I could do it all with my own CSS, but I find that to be really tedious and time-consuming;
+		as a college student, and soon-to-be graduate, I don't have time to do battle with styling.
 	</p>
 	<p>
-	My plan for this site is to make it a sort of portfolio. I would like to talk about and show
-	off some of the projects that I have completed through my internships and schoolwork.
-	Unfortunately, tracking down all the projects I have completed may be difficult. My efforts
-	to provide this information on this site will be coordinated with my efforts to populate
-	my GitHub account (Jacoby04) with the projects. I am always hesitant to show off the code 
-	for projects I completed as I have built up my Computer Science arsenal over the past few years.
-	The reason for this is a lot of times as projects are completed for school, best practice isn't
-	a concern (or at least not as much as it should be). In other words, some of my code might be
-	down-right cringe-worthy. You gotta start somewhere, right? Consider this a disclaimer, I have 
-	improved over the years, and I am always striving to improve further; perfection comes with time.
+		My plan for this site is to make it a sort of portfolio. I would like to talk about and show
+		off some of the projects that I have completed through my internships and schoolwork.
+		Unfortunately, tracking down all the projects I have completed may be difficult. My efforts
+		to provide this information on this site will be coordinated with my efforts to populate
+		my GitHub account (Jacoby04) with the projects. I am always hesitant to show off the code 
+		for projects I completed as I have built up my Computer Science arsenal over the past few years.
+		The reason for this is a lot of times as projects are completed for school, best practice isn't
+		a concern (or at least not as much as it should be). In other words, some of my code might be
+		down-right cringe-worthy. You gotta start somewhere, right? Consider this a disclaimer, I have 
+		improved over the years, and I am always striving to improve further; perfection comes with time.
 	</p>
-
+	
+	<hr>
+	
+	<form ng-submit="main.addComment()">
+		<input type="submit" class="btn btn-primary float-right" value="Add Comment">
+		<div class="text-input">
+			<input class="form-control" type="text" ng-model="main.newComment" placeholder="Comments? Let me know!">
+			<input id="secretComment" type="text" ng-model="main.secretComment" placeholder="Don't put stuff here.">
+		</div>
+	</form>
+	<small>
+		Protip: Comments won't actually be saved. I just wanted to throw some more content on the page so
+		it's not so empty for now. This was a neat, quick way to add some Angular functionality.
+	</small>
+	
+	<h3 ng-hide="main.comments.length == 0">Comments</h3>
+	<ul class="list-group">
+		<li class="list-group-item" ng-repeat="comment in main.comments">
+			{{comment}}
+		</li>
+	</ul>
+	
+	<br>
+	
 </div>
